@@ -1,1 +1,9 @@
-<h1> here is my hello my life is good bro how are you doing man </h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>aiub portal</title>
+    </head>
+    <body style="background color:blue;">
+    <h1 style="color: red;">hello labtask:</h1>
+    </body>
+</html> 
