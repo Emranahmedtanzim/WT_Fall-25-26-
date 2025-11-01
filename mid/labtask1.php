@@ -3,7 +3,7 @@
     <head>
         <title>aiub portal</title>
     </head>
-    <body style="background color:blue;">
+    <body style="background-color:blue;">
     <h1 style="color: red;">hello labtask:</h1>
     </body>
 </html> 
