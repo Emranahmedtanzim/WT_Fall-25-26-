@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Clinic Patient Registration</title>
 <style>
 
@@ -66,7 +67,7 @@ Age:<br>
         <input type=text ><br>
         confirm password:<br>
         <input type=text ><br>
-        <input type=submit   style="background-color:darkblue ; color:black;">
+        <input type=submit   style="background-color:blue ; color:black;">
  
 
     
