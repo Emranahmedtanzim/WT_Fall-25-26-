@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,4 +77,3 @@ Age:<br>
 </center>
 </body>
 </html>
->>>>>>> 20473cba7ad9ae268f1b3f3b2727b58bbc9d98c8
