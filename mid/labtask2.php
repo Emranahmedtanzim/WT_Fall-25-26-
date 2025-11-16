@@ -11,7 +11,7 @@
             border:2px solid black;
             padding:20px;
             width:560px;
-            background-color: cornsilk;
+            background-color: cornsilk
         }
         h2.title1{
             color:blue
