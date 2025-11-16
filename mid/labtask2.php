@@ -55,7 +55,7 @@
             let cpass = document.getElementById("confirm pass").value;
 
             let message = document.getElementById("message");
-            message.innerHTML = "";
+            
            
             if(name === "" || email === "" || phone === "" || pass === "" || cpass === ""){
                 message.innerHTML = "Please fill in all fields.";
