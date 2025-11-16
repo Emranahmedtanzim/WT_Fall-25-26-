@@ -56,8 +56,7 @@
 
             let message = document.getElementById("message");
             message.innerHTML = "";
-            message.style.color = "";
-
+           
             if(name === "" || email === "" || phone === "" || pass === "" || cpass === ""){
                 message.innerHTML = "Please fill in all fields.";
                 return false;
