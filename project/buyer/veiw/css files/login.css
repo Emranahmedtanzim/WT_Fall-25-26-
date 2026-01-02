@@ -1,48 +1,65 @@
 
-#bg {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+
+.bg-image {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
 }
 
-/* Icon/logo */
-#icon {
-    width: 60px;
-    height: 60px;
-    display: block;
-    margin: 30px auto 10px auto;
-}
 
-/* Header text */
 .page-header {
     color: white;
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.header-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+
 .page-header h1 {
-    margin: 10px 0 5px 0;
+    display: inline-block;
+    margin: 0 10px 5px 10px;
+    vertical-align: middle;
 }
 
 .page-header p {
-    margin: 0 0 20px 0;
+    margin: 0;
+    margin-top: 5px;
 }
 
-/* Login box */
+
 .login-box {
-    background-color: rgba(0,0,0,0.8); /* slightly transparent black */
+    background-color: black;
     width: 300px;
     padding: 30px;
-    margin: 20px auto;
+    margin: 20px auto 10px auto;
     border-radius: 10px;
     color: white;
 }
 
-/* Input fields */
+
+.login-box h2 {
+    margin-bottom: 20px;
+}
+
+
 .login-box input {
     width: 90%;
     padding: 10px;
@@ -51,7 +68,7 @@
     border-radius: 5px;
 }
 
-/* Login button */
+
 .login-btn {
     width: 95%;
     padding: 10px;
@@ -62,14 +79,14 @@
     cursor: pointer;
 }
 
-/* Signup section */
+
 .signup-outside {
     color: white;
     text-align: center;
     margin-top: 10px;
 }
 
-/* Signup button */
+
 .signup-btn {
     padding: 8px 20px;
     background-color: blue;
@@ -78,4 +95,3 @@
     margin-top: 5px;
     cursor: pointer;
 }
-
