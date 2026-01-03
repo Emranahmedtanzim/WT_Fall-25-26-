@@ -24,6 +24,9 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
     </div>
 </header>
 <?php
+<main>
+<section class="content">
+<?php
 if ($page == 'buyer-login') {
     include "buyer/buyerlogin.php";
 } elseif ($page == 'buyer-register') {
@@ -35,3 +38,19 @@ if ($page == 'buyer-login') {
 } else {
     
     ?>
+    <div class="hero">
+        <h1>Find Your Perfect Home</h1>
+        <p>
+            HomeFinder helps you discover the best houses, apartments, and properties
+            in your desired location. Whether you are buying, selling, or managing properties,
+            we make the process simple and secure.
+        </p>
+        <a href="index.php?page=buyer-login" class="explore-btn">Explore Homes</a>
+    </div>
+
+
+
+
+</main>
+</section>
+
