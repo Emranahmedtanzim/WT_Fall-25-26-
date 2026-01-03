@@ -23,7 +23,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
         </div>
     </div>
 </header>
-<?php
+
 <main>
 <section class="content">
 <?php
@@ -47,10 +47,15 @@ if ($page == 'buyer-login') {
         </p>
         <a href="index.php?page=buyer-login" class="explore-btn">Explore Homes</a>
     </div>
-
-
-
-
-</main>
+    <?php
+}
+?>
 </section>
+</main>
 
+<footer class="footer">
+    <p>Your trusted partner in finding the perfect home.</p>
+</footer>
+
+</body>
+</html>
