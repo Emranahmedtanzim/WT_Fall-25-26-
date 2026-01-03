@@ -9,4 +9,15 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+}
+
+
 
