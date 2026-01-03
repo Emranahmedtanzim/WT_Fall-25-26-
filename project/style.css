@@ -84,7 +84,7 @@ body {
 }
 /* Form Styles */
 .form-container {
-    background-color: black;
+    background-color:rgba(0,0,0,0.6);
     padding: 40px;
     border-radius: 8px;
     color: white;
@@ -121,7 +121,7 @@ body {
     background-color: darkorange;
     /*muloto button er ekta animation bola jate pare click korle button ta niche jaye*/
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgb(57, 56, 56);
+    box-shadow: ;
 }
 
 /* Form Messages bhul hole ki msg hobe thik hole ki msg hobe  */
