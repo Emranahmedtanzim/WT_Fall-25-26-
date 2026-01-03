@@ -33,6 +33,16 @@ body {
 .login-links a:hover {
     text-decoration: underline;
 }
+/* Main Content */
+.content {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 
 
 
