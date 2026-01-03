@@ -38,7 +38,7 @@ if ($page == 'buyer-login') {
 } else {
     
     ?>
-    <div class="hero">
+    <div class="about">
         <h1>Find Your Perfect Home</h1>
         <p>
             HomeFinder helps you discover the best houses, apartments, and properties
