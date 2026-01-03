@@ -121,7 +121,7 @@ body {
     background-color: darkorange;
     /*muloto button er ekta animation bola jate pare click korle button ta niche jaye*/
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px black;
+    box-shadow: 0 6px 15px rgb(57, 56, 56);
 }
 
 /* Form Messages bhul hole ki msg hobe thik hole ki msg hobe  */
