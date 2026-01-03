@@ -1,4 +1,4 @@
-/* General */
+/* full body */
 body {
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-/* Navbar */
+/* Navbar uporer bar jekhane buyer ar seller login thake */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -33,7 +33,7 @@ body {
 .login-links a:hover {
     text-decoration: underline;
 }
-/* Main Content */
+/* Main Content er design */
 .content {
     min-height: calc(100vh - 120px);
     display: flex;
@@ -41,6 +41,48 @@ body {
     align-items: center;
     flex-direction: column;
 }
+/* about er info design */
+.about {
+    background-color: black;
+    color: white;
+    padding: 100px 40px;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* About Button er deigh mane explore button er design */
+.about button,
+.about .explore-btn {
+    margin-top: 25px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.about button:hover,
+.about .explore-btn:hover {
+    background-color: darkorange;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px black;
+}
+
 
 
 
