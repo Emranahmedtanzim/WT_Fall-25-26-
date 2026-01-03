@@ -24,6 +24,15 @@ body {
     font-size: 22px;
     font-weight: bold;
 }
+.login-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
 
 
 
