@@ -23,3 +23,15 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
         </div>
     </div>
 </header>
+<?php
+if ($page == 'buyer-login') {
+    include "buyer/buyerlogin.php";
+} elseif ($page == 'buyer-register') {
+    include "buyer/buyerregister.php";
+} elseif ($page == 'seller-login') {
+    include "seller/sellerlogin.php";
+} elseif ($page == 'seller-register') {
+    include "seller/sellerregister.php";
+} else {
+    
+    ?>
