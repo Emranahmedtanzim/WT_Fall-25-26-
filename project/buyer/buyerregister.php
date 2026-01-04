@@ -12,6 +12,6 @@
 
     <p class="link-text">
         Already have an account?
-        <a href="/Management/Buyer/index.php?page=buyer-login">Login</a>
+        <a href="/Management/Buyer/index.php?page=buyerlogin">Login</a>
     </p>
 </div>
