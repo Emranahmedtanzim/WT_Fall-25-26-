@@ -13,3 +13,11 @@
 
         <button type="submit" name="login">Login</button>
     </form>
+    <p class="link-text">
+        New buyer?
+        <a href="buyer-register.php">Register</a>
+    </p>
+</div>
+
+</body>
+</html>
