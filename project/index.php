@@ -48,8 +48,7 @@ if ($page == 'buyerlogin') {
     <div class="about">
         <h1>Find Your Perfect Home</h1>
         <p>
-            HomeFinder helps you discover the best houses, apartments, and properties
-            in your desired location. Whether you are buying, selling, or managing properties,
+            HomeFinder helps you discover the best houses.
             
         </p>
         <a href="index.php?page=buyerlogin" class="explore-btn">Explore Homes</a>
