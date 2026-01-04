@@ -41,7 +41,8 @@ if ($page == 'buyerlogin') {
 } elseif ($page == 'sellerregister') {
     include "seller/sellerregister.php";
 } else {
-    
+
+
     
     ?>
     <div class="about">
