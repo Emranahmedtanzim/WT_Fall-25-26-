@@ -18,8 +18,8 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
             <a href="index.php" style="color:white; text-decoration:none;">HomeFinder</a>
         </div>
         <div class="login-links">
-            <a href="index.php?page=seller-login">Seller Login</a>
-            <a href="index.php?page=buyer-login">Buyer Login</a>
+            <a href="index.php?page=sellerlogin">Seller Login</a>
+            <a href="index.php?page=buyerlogin">Buyer Login</a>
         </div>
     </div>
 </header>
