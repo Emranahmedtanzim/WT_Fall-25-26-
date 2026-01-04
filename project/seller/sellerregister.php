@@ -19,7 +19,8 @@
 
     <p class="link-text">
         Already have an account?
-        <a href="sellerlogin.php">Login</a>
+        <a href="index.php?page=sellerlogin">Login</a>
+
     </p>
 </div>
 
