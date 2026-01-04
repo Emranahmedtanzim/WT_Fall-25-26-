@@ -42,6 +42,7 @@ if ($page == 'buyerlogin') {
     include "seller/sellerregister.php";
 } else {
     
+    
     ?>
     <div class="about">
         <h1>Find Your Perfect Home</h1>
