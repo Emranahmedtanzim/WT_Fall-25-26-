@@ -15,7 +15,7 @@
     </form>
     <p class="link-text">
         New buyer?
-        <a href="buyer-register.php">Register</a>
+        <a href="buyerregister.php">Register</a>
     </p>
 </div>
 
