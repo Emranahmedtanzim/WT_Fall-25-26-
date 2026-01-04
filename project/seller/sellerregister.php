@@ -18,7 +18,7 @@
     </form>
 
     <p class="link-text">
-        Already have an account?
+       
         <a href="index.php?page=sellerlogin">Login</a>
 
     </p>
