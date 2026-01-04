@@ -50,7 +50,7 @@ if ($page == 'buyerlogin') {
         <p>
             HomeFinder helps you discover the best houses, apartments, and properties
             in your desired location. Whether you are buying, selling, or managing properties,
-            we make the process simple and secure.
+            
         </p>
         <a href="index.php?page=buyerlogin" class="explore-btn">Explore Homes</a>
     </div>
