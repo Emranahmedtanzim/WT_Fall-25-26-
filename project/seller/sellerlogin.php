@@ -18,7 +18,7 @@
 
     <p class="link-text">
         New seller?
-        <a href="seller-register.php">Register</a>
+        <a href="sellerregister.php">Register</a>
     </p>
 </div>
 
