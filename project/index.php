@@ -45,7 +45,7 @@ if ($page == 'buyerlogin') {
             in your desired location. Whether you are buying, selling, or managing properties,
             we make the process simple and secure.
         </p>
-        <a href="index.php?page=buyerlogin.php" class="explore-btn">Explore Homes</a>
+        <a href="index.php?page=buyer-login.php" class="explore-btn">Explore Homes</a>
     </div>
     <?php
 }
