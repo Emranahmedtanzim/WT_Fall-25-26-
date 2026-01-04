@@ -27,13 +27,13 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 <main>
 <section class="content">
 <?php
-if ($page == 'buyer-login') {
+if ($page == 'buyerlogin') {
     include "buyer/buyerlogin.php";
-} elseif ($page == 'buyer-register') {
+} elseif ($page == 'buyerregister') {
     include "buyer/buyerregister.php";
-} elseif ($page == 'seller-login') {
+} elseif ($page == 'sellerlogin') {
     include "seller/sellerlogin.php";
-} elseif ($page == 'seller-register') {
+} elseif ($page == 'sellerregister') {
     include "seller/sellerregister.php";
 } else {
     
@@ -45,7 +45,7 @@ if ($page == 'buyer-login') {
             in your desired location. Whether you are buying, selling, or managing properties,
             we make the process simple and secure.
         </p>
-        <a href="index.php?page=buyer-login" class="explore-btn">Explore Homes</a>
+        <a href="index.php?page=buyerlogin" class="explore-btn">Explore Homes</a>
     </div>
     <?php
 }
