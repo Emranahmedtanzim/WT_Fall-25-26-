@@ -15,7 +15,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 <header>
     <div class="navbar">
         <div class="logo">
-            <a href="index.php" style="color:white; text-decoration:none;">HomeFinder</a>
+           <a href="index.php" style="color:white; text-decoration:none;">HomeFinder</a>
         </div>
         <div class="login-links">
             <a href="index.php?page=sellerlogin">Seller Login</a>
