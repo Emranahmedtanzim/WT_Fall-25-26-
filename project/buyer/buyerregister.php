@@ -1,17 +1,27 @@
-<link rel="stylesheet" href="auth.css">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buyer Login</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
 
 <div class="auth-box">
-    <h2>Buyer Registration</h2>
+    <h2>Buyer Login</h2>
 
-        <input type="text" name="fullname" placeholder="Full Name" required>
+    <form method="POST" action="">
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="password" placeholder="Password" required minlength="6">
 
-        <button type="submit" name="register">Register</button>
-    
+        <button type="submit" name="login">Login</button>
+    </form>
 
     <p class="link-text">
-        Already have an account?
-        <a href="index.php?page=buyerlogin">Login</a>
+        New buyer?
+        <a href="index.php?page=buyerregister">Register</a>
     </p>
 </div>
+
+</body>
+</html>
