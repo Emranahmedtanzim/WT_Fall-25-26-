@@ -10,9 +10,9 @@
     <h2>Buyer Registration</h2>
 
     <form method="POST" action="">
-        <input type="text" name="fullname" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="password" placeholder="Password" required minlength="6">
+        <input type="text" name="fullname" placeholder="Full Name" >
+        <input type="email" name="email" placeholder="Email" >
+        <input type="password" name="password" placeholder="Password">
 
         <button type="submit" name="register">Register</button>
     </form>
