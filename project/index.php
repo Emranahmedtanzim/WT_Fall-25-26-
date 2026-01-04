@@ -2,7 +2,12 @@
 session_start();
 
 
-$page = isset($_GET['page']) ? $_GET['page'] : 'home';
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
+} else {
+    $page = 'home';
+}
+
 ?>
 <!DOCTYPE html>
 <html>
