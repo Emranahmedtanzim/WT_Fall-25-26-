@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Buyer Registration</title>
-   
+    <link rel="stylesheet" href="auth.css">
 </head>
 <body>
 
@@ -17,7 +17,10 @@
         <button type="submit" name="register">Register</button>
     </form>
 
-    
+    <p class="link-text">
+        Already have an account?
+        <a href="buyer-login.php">Login</a>
+    </p>
 </div>
 
 </body>
