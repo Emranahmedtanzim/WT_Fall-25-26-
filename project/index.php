@@ -42,8 +42,8 @@ elseif ($page == 'sellerlogin') {
 elseif ($page == 'sellerregister') {
     include "seller/sellerregister.php";
 }
-elseif ($page == 'selleraddproperty') {
-    include "seller/selleraddproperty.php";
+elseif ($page == 'sellerdashboard') {  
+    include "sellerdashboard.php";
 }
 else {
 ?>
