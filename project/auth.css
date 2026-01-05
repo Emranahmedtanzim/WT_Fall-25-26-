@@ -1,4 +1,4 @@
-/* Buyer ar seller er css  */
+
 body {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Center Box */
+
 .auth-box {
     width: 350px;
     background-color: white;
@@ -18,13 +18,12 @@ body {
 }
 
 
-/* Headings */
 .auth-box h2 {
     margin: 0 0 20px 0;
     color: #333;
 }
 
-/* Inputs box gular jonno */
+
 .auth-box input {
     width: 100%;
     box-sizing: border-box;
@@ -39,7 +38,7 @@ body {
     border-color: #3498db;
 }
 
-/* Button er size  */
+
 .auth-box button {
     width: 100%;
     padding: 10px;
@@ -55,29 +54,30 @@ body {
     background-color: #2980b9;
 }
 
-/* Messages  show korbe */
-.auth-error,
-.auth-success {
+.auth-error {
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px; 
     border-radius: 4px;
     font-size: 14px;
     text-align: left;
-}
-
-.auth-error {
     background: #ffe6e6;
     border: 1px solid #ffb3b3;
     color: #b30000;
 }
 
+
 .auth-success {
+    padding: 10px;
+    margin-bottom: 10px; 
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: left;
     background: #e7f8ee;
     border: 1px solid #b9ebcc;
     color: #166534;
 }
 
-/*link er jonno*/
+
 .link-text {
     margin-top: 15px;
     font-size: 14px;
@@ -86,7 +86,7 @@ body {
 .link-text a {
     color: #3498db;
     text-decoration: none;
-}z
+}
 
 .link-text a:hover {
     text-decoration: underline;

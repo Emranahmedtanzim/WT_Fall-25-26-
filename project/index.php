@@ -1,13 +1,11 @@
 <?php
 session_start();
 
-
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
 } else {
     $page = 'home';
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,7 +18,7 @@ if (isset($_GET['page'])) {
 <header>
     <div class="navbar">
         <div class="logo">
-           <a href="index.php" style="color:white; text-decoration:none;">HomeFinder</a>
+            <a href="index.php" style="color:white; text-decoration:none;">HomeFinder</a>
         </div>
         <div class="login-links">
             <a href="index.php?page=sellerlogin">Seller Login</a>
@@ -34,26 +32,29 @@ if (isset($_GET['page'])) {
 <?php
 if ($page == 'buyerlogin') {
     include "buyer/buyerlogin.php";
-} elseif ($page == 'buyerregister') {
+}
+elseif ($page == 'buyerregister') {
     include "buyer/buyerregister.php";
-} elseif ($page == 'sellerlogin') {
+}
+elseif ($page == 'sellerlogin') {
     include "seller/sellerlogin.php";
-} elseif ($page == 'sellerregister') {
+}
+elseif ($page == 'sellerregister') {
     include "seller/sellerregister.php";
-} else {
-
-
-    
-    ?>
+}
+elseif ($page == 'selleraddproperty') {
+    include "seller/selleraddproperty.php";
+}
+else {
+?>
     <div class="about">
         <h1>Find Your Perfect Home</h1>
         <p>
             HomeFinder helps you discover the best houses.
-            
         </p>
         <a href="index.php?page=buyerlogin" class="explore-btn">Explore Homes</a>
     </div>
-    <?php
+<?php
 }
 ?>
 </section>

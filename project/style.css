@@ -1,4 +1,4 @@
-/* full body */
+
 body {
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Navbar uporer bar jekhane buyer ar seller login thake */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -35,7 +35,7 @@ body {
     text-decoration: underline;
 }
 
-/* Main Content er design */
+
 .content {
     min-height: calc(100vh - 120px);
     display: flex;
@@ -44,7 +44,7 @@ body {
     flex-direction: column;
 }
 
-/* about er info design */
+
 .about {
     background-color: rgba(0,0,0,0.6);
     color: white;
@@ -63,7 +63,7 @@ body {
     margin: auto;
 }
 
-/* About Button er deigh mane explore button er design */
+
 .about button,
 .about .explore-btn {
     margin-top: 25px;
@@ -86,7 +86,6 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-/* Form Styles */
 .form-container {
     background-color: rgba(0,0,0,0.6);
     padding: 40px;
@@ -108,7 +107,6 @@ body {
     border: none;
 }
 
-/* Submit Button er design */
 .form-container input[type="submit"] {
     background-color: #ff9800;
     color: white;
@@ -126,7 +124,7 @@ body {
     box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
-/* Form Messages bhul hole ki msg hobe thik hole ki msg hobe  */
+
 .error {
     color: #ff4d4d;
 }
@@ -144,7 +142,7 @@ body {
     text-decoration: underline;
 }
 
-/* Footer er design  */
+
 .footer {
     background-color: rgba(0,0,0,0.8);
     color: white;
