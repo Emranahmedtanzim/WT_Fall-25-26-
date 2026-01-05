@@ -3,7 +3,7 @@
 <head>
    
     <title>Seller Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sellerdashboard.css">
 </head>
 <body>
 
