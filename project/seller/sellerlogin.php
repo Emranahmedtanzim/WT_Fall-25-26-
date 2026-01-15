@@ -1,7 +1,7 @@
 <?php
-include "db.php"; // Make sure this path points to your db.php
+include "db.php"; 
 
-// Start session if not already started
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -15,16 +15,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
     if (empty($email) || empty($password)) {
         $error = "Email and password are required.";
     } else {
-        // Check if the seller exists
+        
         $sql = "SELECT * FROM seller WHERE email='$email'";
         $result = $conn->query($sql);
 
         if ($result->num_rows == 1) {
             $row = $result->fetch_assoc();
 
-            // Verify password
+           
             if (password_verify($password, $row['password'])) {
-                // Correct login → save session and redirect to dashboard
+                
                 $_SESSION['seller_email'] = $email;
                 header("Location: index.php?page=sellerdashboard");
                 exit;

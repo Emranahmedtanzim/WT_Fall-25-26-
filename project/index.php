@@ -36,6 +36,9 @@ if ($page == 'buyerlogin') {
 elseif ($page == 'buyerregister') {
     include "buyer/buyerregister.php";
 }
+elseif ($page == 'buyerdashboard') {  
+    include "buyerdashboard.php";
+}
 elseif ($page == 'sellerlogin') {
     include "seller/sellerlogin.php";
 }
