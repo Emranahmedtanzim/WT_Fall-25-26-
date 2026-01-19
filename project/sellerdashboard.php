@@ -25,7 +25,6 @@ $success = "";
 
 if (isset($_POST["submit"])) {
 
-    
     if (empty($_POST["seller_email"])) {
         $error .= "Business email is required.<br>";
     } else {
@@ -87,12 +86,30 @@ if (isset($_POST["delete_id"])) {
 }
 
 
+$msg_success = "";
+$msg_error = "";
+
+if (isset($_POST['send_message'])) {
+    if (empty($_POST['message'])) {
+        $msg_error = "Message cannot be empty.";
+    } else {
+        $message = $conn->real_escape_string($_POST['message']);
+        $sql = "INSERT INTO sellermessages (message) VALUES ('$message')";
+        if ($conn->query($sql)) {
+            $msg_success = "Message sent successfully!";
+        } else {
+            $msg_error = "Failed to send message.";
+        }
+    }
+}
+
 $result = $conn->query("SELECT * FROM properties ORDER BY id DESC");
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Seller Dashboard</title>
     <link rel="stylesheet" href="sellerdashboard.css">
 </head>
@@ -102,19 +119,20 @@ $result = $conn->query("SELECT * FROM properties ORDER BY id DESC");
 
     <h1>Seller Dashboard</h1>
 
+   
     <form method="post" style="text-align:right; margin-bottom:20px;">
         <button type="submit" name="logout" class="btn-logout">Logout</button>
     </form>
 
+
     <?php if ($success) { ?>
         <div class="auth-success"><?php echo $success; ?></div>
     <?php } ?>
-
     <?php if ($error) { ?>
         <div class="auth-error"><?php echo $error; ?></div>
     <?php } ?>
 
-   
+    
     <form method="post">
         <label>Business Email:</label><br>
         <input type="text" name="seller_email" value="<?php echo htmlspecialchars($seller_email); ?>"><br><br>
@@ -134,7 +152,22 @@ $result = $conn->query("SELECT * FROM properties ORDER BY id DESC");
         <input type="submit" name="submit" value="Submit Property" class="btn-submit">
     </form>
 
-   
+    
+    <h3>Send Message to Admin</h3>
+
+    <?php if ($msg_success) { ?>
+        <div class="auth-success"><?php echo $msg_success; ?></div>
+    <?php } ?>
+    <?php if ($msg_error) { ?>
+        <div class="auth-error"><?php echo $msg_error; ?></div>
+    <?php } ?>
+
+    <form method="post">
+        <textarea name="message" rows="4" placeholder="Write your message here..."></textarea><br><br>
+        <button type="submit" name="send_message" class="btn-submit">Send Message</button>
+    </form>
+
+    
     <h3>Added Properties</h3>
 
     <?php if ($result && $result->num_rows > 0) { ?>
