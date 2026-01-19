@@ -5,14 +5,14 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-
+/* LOGOUT */
 if (isset($_POST['logout'])) {
     session_destroy();
     header("Location: index.php?page=sellerlogin");
     exit;
 }
 
-
+/* VARIABLES */
 $seller_email = "";
 $title = "";
 $location = "";
@@ -22,9 +22,8 @@ $description = "";
 $error = "";
 $success = "";
 
-
+/* HANDLE PROPERTY SUBMIT */
 if (isset($_POST["submit"])) {
-
     if (empty($_POST["seller_email"])) {
         $error .= "Business email is required.<br>";
     } else {
@@ -72,12 +71,10 @@ if (isset($_POST["submit"])) {
     }
 }
 
-
+/* HANDLE PROPERTY DELETE */
 if (isset($_POST["delete_id"])) {
     $delete_id = $_POST["delete_id"];
-
     $sql = "DELETE FROM properties WHERE id='$delete_id' LIMIT 1";
-
     if ($conn->query($sql)) {
         $success = "Property deleted successfully!";
     } else {
@@ -85,23 +82,6 @@ if (isset($_POST["delete_id"])) {
     }
 }
 
-
-$msg_success = "";
-$msg_error = "";
-
-if (isset($_POST['send_message'])) {
-    if (empty($_POST['message'])) {
-        $msg_error = "Message cannot be empty.";
-    } else {
-        $message = $conn->real_escape_string($_POST['message']);
-        $sql = "INSERT INTO sellermessages (message) VALUES ('$message')";
-        if ($conn->query($sql)) {
-            $msg_success = "Message sent successfully!";
-        } else {
-            $msg_error = "Failed to send message.";
-        }
-    }
-}
 
 $result = $conn->query("SELECT * FROM properties ORDER BY id DESC");
 ?>
@@ -119,20 +99,15 @@ $result = $conn->query("SELECT * FROM properties ORDER BY id DESC");
 
     <h1>Seller Dashboard</h1>
 
-   
     <form method="post" style="text-align:right; margin-bottom:20px;">
         <button type="submit" name="logout" class="btn-logout">Logout</button>
     </form>
 
+    <!-- SUCCESS / ERROR MESSAGES -->
+    <?php if ($success) { echo "<div class='auth-success'>$success</div>"; } ?>
+    <?php if ($error) { echo "<div class='auth-error'>$error</div>"; } ?>
 
-    <?php if ($success) { ?>
-        <div class="auth-success"><?php echo $success; ?></div>
-    <?php } ?>
-    <?php if ($error) { ?>
-        <div class="auth-error"><?php echo $error; ?></div>
-    <?php } ?>
-
-    
+    <!-- ADD PROPERTY -->
     <form method="post">
         <label>Business Email:</label><br>
         <input type="text" name="seller_email" value="<?php echo htmlspecialchars($seller_email); ?>"><br><br>
@@ -150,26 +125,16 @@ $result = $conn->query("SELECT * FROM properties ORDER BY id DESC");
         <textarea name="description" rows="4"><?php echo htmlspecialchars($description); ?></textarea><br><br>
 
         <input type="submit" name="submit" value="Submit Property" class="btn-submit">
+        
     </form>
 
     
-    <h3>Send Message to Admin</h3>
-
-    <?php if ($msg_success) { ?>
-        <div class="auth-success"><?php echo $msg_success; ?></div>
-    <?php } ?>
-    <?php if ($msg_error) { ?>
-        <div class="auth-error"><?php echo $msg_error; ?></div>
-    <?php } ?>
-
-    <form method="post">
-        <textarea name="message" rows="4" placeholder="Write your message here..."></textarea><br><br>
-        <button type="submit" name="send_message" class="btn-submit">Send Message</button>
-    </form>
-
     
+    
+   
+
+    <!-- PROPERTY TABLE -->
     <h3>Added Properties</h3>
-
     <?php if ($result && $result->num_rows > 0) { ?>
         <table>
             <tr>
@@ -180,7 +145,6 @@ $result = $conn->query("SELECT * FROM properties ORDER BY id DESC");
                 <th>Description</th>
                 <th>Action</th>
             </tr>
-
             <?php while ($row = $result->fetch_assoc()) { ?>
                 <tr>
                     <td><?php echo htmlspecialchars($row["seller_email"]); ?></td>

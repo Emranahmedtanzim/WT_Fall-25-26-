@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -16,13 +15,12 @@ body {
     border-radius: 8px;
 }
 
-
 h1 {
     color: #333;
 }
 
-
-.auth-success {
+/* Success / Error messages */
+.auth-success, .msg-success {
     background: #e7f8ee;
     border: 1px solid #b9ebcc;
     color: #166534;
@@ -31,7 +29,7 @@ h1 {
     margin-bottom: 15px;
 }
 
-.auth-error {
+.auth-error, .msg-error {
     background: #ffe6e6;
     border: 1px solid #ffb3b3;
     color: #b30000;
@@ -40,8 +38,7 @@ h1 {
     margin-bottom: 15px;
 }
 
-input,
-textarea {
+input, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -49,20 +46,9 @@ textarea {
     font-size: 14px;
 }
 
+/* Message box styling */
 
-.btn-submit {
-    padding: 12px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
 
-.btn-submit:hover {
-    background-color: #2980b9;
-}
 
 
 table {
@@ -71,8 +57,7 @@ table {
     margin-top: 20px;
 }
 
-th,
-td {
+th, td {
     padding: 12px;
     border-bottom: 1px solid #ddd;
     text-align: left;
@@ -81,7 +66,6 @@ td {
 th {
     background-color: #f8f8f8;
 }
-
 
 .btn-delete {
     padding: 6px 12px;
@@ -95,7 +79,6 @@ th {
 .btn-delete:hover {
     background-color: #c0392b;
 }
-
 
 .btn-logout {
     padding: 8px 16px;
@@ -111,7 +94,21 @@ th {
     background-color: #d30000; 
 }
 
-
 .no-data {
     color: #777;
+}
+
+/* New addition */
+
+.btn-submit {
+    padding: 10px 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
 }
