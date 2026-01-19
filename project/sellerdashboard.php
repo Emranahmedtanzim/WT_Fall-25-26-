@@ -13,6 +13,7 @@ if (isset($_POST['logout'])) {
 }
 
 
+$seller_email = "";
 $title = "";
 $location = "";
 $price = "";
@@ -23,6 +24,13 @@ $success = "";
 
 
 if (isset($_POST["submit"])) {
+
+    
+    if (empty($_POST["seller_email"])) {
+        $error .= "Business email is required.<br>";
+    } else {
+        $seller_email = $_POST["seller_email"];
+    }
 
     if (empty($_POST["title"])) {
         $error .= "Property title is required.<br>";
@@ -52,13 +60,13 @@ if (isset($_POST["submit"])) {
 
     if ($error === "") {
         $sql = "
-            INSERT INTO properties (title, location, price, description)
-            VALUES ('$title', '$location', '$price', '$description')
+            INSERT INTO properties (seller_email, title, location, price, description)
+            VALUES ('$seller_email', '$title', '$location', '$price', '$description')
         ";
 
         if ($conn->query($sql)) {
             $success = "Property added successfully!";
-            $title = $location = $price = $description = "";
+            $seller_email = $title = $location = $price = $description = "";
         } else {
             $error = "Database error: " . $conn->error;
         }
@@ -83,9 +91,8 @@ $result = $conn->query("SELECT * FROM properties ORDER BY id DESC");
 ?>
 
 <!DOCTYPE html>
-<html >
+<html>
 <head>
-    
     <title>Seller Dashboard</title>
     <link rel="stylesheet" href="sellerdashboard.css">
 </head>
@@ -95,7 +102,7 @@ $result = $conn->query("SELECT * FROM properties ORDER BY id DESC");
 
     <h1>Seller Dashboard</h1>
 
-    <form method="post" style="text-align: right; margin-bottom: 20px;">
+    <form method="post" style="text-align:right; margin-bottom:20px;">
         <button type="submit" name="logout" class="btn-logout">Logout</button>
     </form>
 
@@ -107,8 +114,11 @@ $result = $conn->query("SELECT * FROM properties ORDER BY id DESC");
         <div class="auth-error"><?php echo $error; ?></div>
     <?php } ?>
 
-  
+   
     <form method="post">
+        <label>Business Email:</label><br>
+        <input type="text" name="seller_email" value="<?php echo htmlspecialchars($seller_email); ?>"><br><br>
+
         <label>Property Title:</label><br>
         <input type="text" name="title" value="<?php echo htmlspecialchars($title); ?>"><br><br>
 
@@ -130,6 +140,7 @@ $result = $conn->query("SELECT * FROM properties ORDER BY id DESC");
     <?php if ($result && $result->num_rows > 0) { ?>
         <table>
             <tr>
+                <th>Business Email</th>
                 <th>Title</th>
                 <th>Location</th>
                 <th>Price</th>
@@ -139,6 +150,7 @@ $result = $conn->query("SELECT * FROM properties ORDER BY id DESC");
 
             <?php while ($row = $result->fetch_assoc()) { ?>
                 <tr>
+                    <td><?php echo htmlspecialchars($row["seller_email"]); ?></td>
                     <td><?php echo htmlspecialchars($row["title"]); ?></td>
                     <td><?php echo htmlspecialchars($row["location"]); ?></td>
                     <td><?php echo htmlspecialchars($row["price"]); ?></td>
